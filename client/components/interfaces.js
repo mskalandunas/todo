@@ -7,6 +7,11 @@ export const ICard = {
   subtasks: ISubtasks
 };
 
+export const IColumn = {
+  heading: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(ICard).isRequired
+};
+
 const IMedia = PropTypes.shape({
   imageURL: PropTypes.string,
   externalURL: PropTypes.string

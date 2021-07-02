@@ -2,8 +2,8 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "build:client": "parcel build client/index.html",
     "watch:client": "parcel -p 3001 client/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "parcel": "^2.0.0-beta.2"

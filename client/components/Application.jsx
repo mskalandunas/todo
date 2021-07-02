@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { ICard, IColumn } from './interfaces';
+import { Column } from './Column';
+import { IColumn } from './interfaces';
 
-export const Application = () => {
+export const Application = props => {
   return (
-    <h1>Hello world</h1>
+    <ol>
+      {props.columns.map(Column)}
+    </ol>
   );
 };
 
 Application.propTypes = {
-  columns: PropTypes.arrayOf(IColumn).isRequired,
-  items: PropTypes.arrayOf(ICard).isRequired
+  columns: PropTypes.arrayOf(IColumn).isRequired
 };

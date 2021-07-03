@@ -5,6 +5,10 @@ import { Column } from './Column';
 import { IColumn } from './interfaces';
 
 export class Application extends React.Component {
+  static propTypes = {
+    columns: PropTypes.arrayOf(PropTypes.shape(IColumn)).isRequired
+  }
+
   renderColumns(props) {
     return (
       <li>
@@ -20,8 +24,4 @@ export class Application extends React.Component {
       </ol>
     );
   }
-};
-
-Application.propTypes = {
-  columns: PropTypes.arrayOf(IColumn).isRequired
 };

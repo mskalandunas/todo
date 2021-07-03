@@ -17,7 +17,7 @@ export const Card = props => {
         {media.externalURL}
       </a>
     ],
-    subtasks.meta.count &&
+    subtasks.hasItems &&
       <ul>
         {subtasks.items.map(item => <li>{item}</li>)}
       </ul>

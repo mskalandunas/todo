@@ -6,9 +6,7 @@ const IMedia = PropTypes.shape({
 });
 
 const ISubtasks = PropTypes.shape({
-  meta: PropTypes.shape({
-    count: PropTypes.number.isRequired
-  }).isRequired,
+  hasItems: PropTypes.bool.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired
 }).isRequired;
 

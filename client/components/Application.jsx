@@ -4,12 +4,22 @@ import React from 'react';
 import { Column } from './Column';
 import { IColumn } from './interfaces';
 
-export const Application = props => {
-  return (
-    <ol>
-      {props.columns.map(Column)}
-    </ol>
-  );
+export class Application extends React.Component {
+  renderColumns(props) {
+    return (
+      <li>
+        <Column {...props} />
+      </li>
+    );
+  }
+
+  render() {
+    return (
+      <ol>
+        {this.props.columns.map(this.renderColumns)}
+      </ol>
+    );
+  }
 };
 
 Application.propTypes = {

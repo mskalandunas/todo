@@ -3,13 +3,23 @@ import React from 'react';
 import { Card } from './Card';
 import { IColumn } from './interfaces';
 
-export const Column = props => {
-  const { heading, items } = props;
+export class Column extends React.Component {
+  renderItem(props) {
+    return (
+      <li>
+        <Card {...props} />
+      </li>
+    )
+  }
 
-  return [
-    <h1>{heading}</h1>,
-    items.map(Card)
-  ];
+  render() {
+    const { heading, items } = this.props;
+
+    return [
+      <h1>{heading}</h1>,
+      <ul>{items.map(this.renderItem)}</ul>
+    ];
+  }
 };
 
 Column.propTypes = IColumn;

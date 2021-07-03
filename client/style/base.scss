@@ -2,3 +2,15 @@ body {
   background-color: black;
   color: white;
 }
+
+ol {
+  display: flex;
+
+  & > li {
+    flex-grow: 1;
+
+    & > ul > li {
+      border: 1px solid white;
+    }
+  }
+}

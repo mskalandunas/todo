@@ -7,14 +7,38 @@ ReactDOM.render(
   <Application
     columns={[
       {
-        heading: 'Column 1',
-        items: [{
-          body: "Card body",
-          heading: "Card Heading",
-          subtasks: {
-            meta: {
-              count: 0
+        heading: 'Todo',
+        items: [
+          {
+            body: "Make flashcard app",
+            heading: "Flashcards",
+            subtasks: {
+              hasItems: true,
+              items: ['Add CSS', 'Add JS']
             }
+          },
+          {
+            body: "Make todo app",
+            heading: "Todo",
+            subtasks: {
+              hasItems: false,
+              items: []
+            }
+          },
+        ]
+      },
+      {
+        heading: 'In Progress',
+        items: []
+      },
+      {
+        heading: 'Done',
+        items: [{
+          body: "Create DS & Algo flashcards",
+          heading: "Interviewing",
+          subtasks: {
+            hasItems: false,
+            items: []
           }
         }]
       }

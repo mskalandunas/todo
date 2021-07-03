@@ -10,8 +10,8 @@ ReactDOM.render(
         heading: 'Todo',
         items: [
           {
-            body: "Make flashcard app",
-            heading: "Flashcards",
+            body: "Make flashItem app",
+            heading: "FlashItems",
             subtasks: {
               hasItems: true,
               items: ['Add CSS', 'Add JS']
@@ -34,7 +34,7 @@ ReactDOM.render(
       {
         heading: 'Done',
         items: [{
-          body: "Create DS & Algo flashcards",
+          body: "Create DS & Algo flashItems",
           heading: "Interviewing",
           subtasks: {
             hasItems: false,

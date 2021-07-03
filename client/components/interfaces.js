@@ -10,7 +10,7 @@ const ISubtasks = PropTypes.shape({
   items: PropTypes.arrayOf(PropTypes.string).isRequired
 }).isRequired;
 
-export const ICard = {
+export const IItem = {
   body: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   media: IMedia,
@@ -19,5 +19,5 @@ export const ICard = {
 
 export const IColumn = {
   heading: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(ICard).isRequired
+  items: PropTypes.arrayOf(IItem).isRequired
 };

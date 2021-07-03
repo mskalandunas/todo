@@ -1,4 +1,4 @@
 import { createDraggableComponent } from "./Draggable";
-import { Card } from "./Card";
+import { Item } from "./Item";
 
-export const DraggableItem = createDraggableComponent(Card);
+export const DraggableItem = createDraggableComponent(Item);

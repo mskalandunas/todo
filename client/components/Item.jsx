@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ICard } from './interfaces';
+import { IItem } from './interfaces';
 
-export const Card = props => {
+export const Item = props => {
   const { body, heading, media, subtasks } = props;
 
   return [
@@ -24,8 +24,8 @@ export const Card = props => {
   ];
 };
 
-Card.defaultProps = {
+Item.defaultProps = {
   media: null
 };
 
-Card.propTypes = ICard;
+Item.propTypes = IItem;

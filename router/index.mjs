@@ -1,12 +1,12 @@
 import { Router } from 'express';
 
 import { apiRouter } from './api/index.mjs';
-import { templateRouter } from './templates/index.mjs';
+import { viewRouter } from './views/index.mjs';
 
 const baseRouter = Router();
 
 baseRouter
-  .use('/', templateRouter)
+  .use('/', viewRouter)
   .use('/api', apiRouter);
 
 export { baseRouter };

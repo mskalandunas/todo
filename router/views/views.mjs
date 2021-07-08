@@ -1,5 +1,5 @@
 export const baseViewController = (req, res) => {
-  res.send(`
+    res.send(`
     <html>
     <head>
       <title>Maker</title>
@@ -8,5 +8,5 @@ export const baseViewController = (req, res) => {
       <h1>Hello world</h1>
     </body>
     </html>
-  `);
-};
+  `)
+}

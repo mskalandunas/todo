@@ -1,10 +1,9 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-import { itemRouter } from './item.mjs';
+import { itemRouter } from './item.mjs'
 
-const apiRouter = Router();
+const apiRouter = Router()
 
-apiRouter
-  .use('/item', itemRouter);
+apiRouter.use('/item', itemRouter)
 
-export { apiRouter };
+export { apiRouter }

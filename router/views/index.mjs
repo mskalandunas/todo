@@ -1,10 +1,9 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-import { baseViewController } from './views.mjs';
+import { baseViewController } from './views.mjs'
 
-const viewRouter = Router();
+const viewRouter = Router()
 
-viewRouter
-  .get('/', baseViewController);
+viewRouter.get('/', baseViewController)
 
-  export { viewRouter };
+export { viewRouter }

@@ -1,9 +1,7 @@
-import express from 'express';
+import express from 'express'
 
-import { baseRouter } from './router/index.mjs';
+import { baseRouter } from './router/index.mjs'
 
-const app = express();
+const app = express()
 
-app
-  .use('/', baseRouter)
-  .listen(3000, () => console.log('Server started'));
+app.use('/', baseRouter).listen(3000, () => console.log('Server started'))

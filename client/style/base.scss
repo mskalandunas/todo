@@ -1,16 +1,16 @@
 body {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 ol {
-  display: flex;
+    display: flex;
 
-  & > li {
-    flex-grow: 1;
+    & > li {
+        flex-grow: 1;
 
-    & > ul > li {
-      border: 1px solid white;
+        & > ul > li {
+            border: 1px solid white;
+        }
     }
-  }
 }

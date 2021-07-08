@@ -1,12 +1,10 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-import { apiRouter } from './api/index.mjs';
-import { viewRouter } from './views/index.mjs';
+import { apiRouter } from './api/index.mjs'
+import { viewRouter } from './views/index.mjs'
 
-const baseRouter = Router();
+const baseRouter = Router()
 
-baseRouter
-  .use('/', viewRouter)
-  .use('/api', apiRouter);
+baseRouter.use('/', viewRouter).use('/api', apiRouter)
 
-export { baseRouter };
+export { baseRouter }

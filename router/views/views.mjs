@@ -1,12 +1,8 @@
+import fs from 'fs';
+import path from 'path';
+
 export const baseViewController = (req, res) => {
-  res.send(`
-    <html>
-    <head>
-      <title>Maker</title>
-    </head>
-    <body>
-      <h1>Hello world</h1>
-    </body>
-    </html>
-  `);
+  fs.readFile(path.resolve('dist/index.html'), 'utf8', (err, data) => {
+      res.send(err ? 'Something went wrong.' : data);
+  }); 
 };

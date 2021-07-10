@@ -8,6 +8,7 @@ export const createDraggableComponent = Component => {
           className="draggable"
           onDrag={console.log}
           onDragEnter={console.log}
+          onDragExit={console.log}
           onDragLeave={console.log}
           onDragOver={console.log}
           onDragStart={console.log}

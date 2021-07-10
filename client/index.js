@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Application } from './components/Application';
+import { Application } from '../lib/components/Application';
 import { FIXTURES } from '../lib/__fixtures__';
 
 ReactDOM.hydrate(

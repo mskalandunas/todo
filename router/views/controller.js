@@ -3,7 +3,7 @@ import path from 'path';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import { Application } from '../../client/components/Application';
+import { Application } from '../../lib/components/Application';
 import { FIXTURES } from '../../lib/__fixtures__';
 
 const PATH_TO_INDEX = './templates/index.html';

@@ -9,6 +9,11 @@ export class Application extends React.Component {
     columns: PropTypes.arrayOf(PropTypes.shape(IColumn)).isRequired
   };
 
+  state = {
+    columns: [],
+    loading: true
+  };
+
   renderColumns(props) {
     return (
       <li>
@@ -17,7 +22,21 @@ export class Application extends React.Component {
     );
   }
 
+  componentDidMount() {
+    fetch('/api/item').then(data => data.json()).then(columns => {
+      this.setState(() => ({
+        columns,
+        loading: false
+      }));
+    });
+  }
+
   render() {
-    return <ol>{this.props.columns.map(this.renderColumns)}</ol>;
+    console.log(this.state);
+    if (this.state.loading) {
+      return <div>LOADING</div>
+    }
+
+    return <ol>{this.state.columns.map(this.renderColumns)}</ol>;
   }
 }

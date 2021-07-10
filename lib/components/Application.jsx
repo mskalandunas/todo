@@ -16,6 +16,10 @@ export class Application extends React.Component {
     loading: true
   };
 
+  handleFetchSuccess = (columns) => {
+    this.setState(() => ({ columns, loading: false }));
+  }
+
   renderColumns(props, i) {
     const key = props.heading + '_' + i;
 
@@ -28,12 +32,7 @@ export class Application extends React.Component {
 
   componentDidMount() {
     fetchData({
-      success: columns => {
-        this.setState(() => ({
-          columns,
-          loading: false
-        }));
-      },
+      success: this.handleFetchSuccess,
       url: '/api/item'
     });
   }

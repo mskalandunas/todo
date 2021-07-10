@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { itemRouter } from './item.mjs';
+import { itemRouter } from './item';
 
 const apiRouter = Router();
 

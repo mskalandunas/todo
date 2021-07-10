@@ -2,49 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Application } from './components/Application';
+import { FIXTURES } from '../lib/__fixtures__/data';
 
-ReactDOM.render(
-  <Application
-    columns={[
-      {
-        heading: 'Todo',
-        items: [
-          {
-            body: 'Make flashItem app',
-            heading: 'FlashItems',
-            subtasks: {
-              hasItems: true,
-              items: ['Add CSS', 'Add JS']
-            }
-          },
-          {
-            body: 'Make todo app',
-            heading: 'Todo',
-            subtasks: {
-              hasItems: false,
-              items: []
-            }
-          }
-        ]
-      },
-      {
-        heading: 'In Progress',
-        items: []
-      },
-      {
-        heading: 'Done',
-        items: [
-          {
-            body: 'Create DS & Algo flashItems',
-            heading: 'Interviewing',
-            subtasks: {
-              hasItems: false,
-              items: []
-            }
-          }
-        ]
-      }
-    ]}
-  />,
+ReactDOM.hydrate(
+  <Application columns={FIXTURES.MOCK_DATA} />,
   document.getElementById('ReactRoot')
 );

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Application } from '../lib/components/Application';
-import { FIXTURES } from '../lib/__fixtures__';
+import { Application } from '@components/Application';
+import { FIXTURES } from '@fixtures';
 
 ReactDOM.hydrate(
   <Application columns={FIXTURES.COLUMNS} />,

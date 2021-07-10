@@ -12,7 +12,8 @@ const extendConfigFromBase = overwrites => ({
   resolve: {
     alias: {
       '@components': path.resolve('lib/components'),
-      '@fixtures': path.resolve('lib/__fixtures__')
+      '@fixtures': path.resolve('lib/__fixtures__'),
+      '@utils': path.resolve('lib/utils')
     },
     extensions: ['.js', '.jsx']
   },

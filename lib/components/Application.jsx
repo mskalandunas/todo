@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { fetchData } from '@utils/fetchUtils';
+
 import { Column } from './Column';
 import { IColumn } from './interfaces';
 
@@ -14,27 +16,32 @@ export class Application extends React.Component {
     loading: true
   };
 
-  renderColumns(props) {
+  renderColumns(props, i) {
+    const key = props.heading + '_' + i;
+
     return (
-      <li>
+      <li key={key}>
         <Column {...props} />
       </li>
     );
   }
 
   componentDidMount() {
-    fetch('/api/item').then(data => data.json()).then(columns => {
-      this.setState(() => ({
-        columns,
-        loading: false
-      }));
+    fetchData({
+      success: columns => {
+        this.setState(() => ({
+          columns,
+          loading: false
+        }));
+      },
+      url: '/api/item'
     });
   }
 
   render() {
     console.log(this.state);
     if (this.state.loading) {
-      return <div>LOADING</div>
+      return <div>LOADING</div>;
     }
 
     return <ol>{this.state.columns.map(this.renderColumns)}</ol>;

@@ -1,8 +1,8 @@
 const path = require('path');
 
-const { createWebpackConfig } = require('../webpack.base');
+const { extendConfigFromBase } = require('../webpack.base');
 
-module.exports = createWebpackConfig({
+module.exports = extendConfigFromBase({
   entry: './client/index.jsx',
   target: 'web',
   output: {

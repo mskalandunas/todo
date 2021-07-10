@@ -1,6 +1,6 @@
 const path = require('path');
 
-const createWebpackConfig = overwrites => ({
+const extendConfigFromBase = overwrites => ({
   module: {
     rules: [
       {
@@ -20,5 +20,5 @@ const createWebpackConfig = overwrites => ({
 });
 
 module.exports = {
-  createWebpackConfig
+  extendConfigFromBase
 };

@@ -19,7 +19,11 @@ export const viewController = (req, res) => {
     res.send(
       data.replace(
         '<div id="ReactRoot"></div>',
-        '<div id="ReactRoot">' + ReactDOMServer.renderToString(<Application columns={FIXTURES.COLUMNS} />) + '</div>'
+        '<div id="ReactRoot">' +
+          ReactDOMServer.renderToString(
+            <Application columns={FIXTURES.COLUMNS} />
+          ) +
+          '</div>'
       )
     );
   });

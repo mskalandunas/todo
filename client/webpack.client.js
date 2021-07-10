@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './client/index.jsx',
   target: 'web',
   output: {
     path: path.resolve('dist'),
-    filename: 'index.js'
+    filename: 'client.index.js'
   },
   module: {
     rules: [

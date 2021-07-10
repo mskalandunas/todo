@@ -2,12 +2,12 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './index.js',
+  entry: path.resolve('server/index.js'),
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path: path.resolve('server-build'),
-    filename: 'index.js'
+    path: path.resolve('dist'),
+    filename: 'server.index.js'
   },
   module: {
     rules: [

@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:client": "webpack",
-    "build:server": "NODE_ENV=development webpack --config webpack.server.js --mode=development",
-    "dev:start": "nodemon ./server-build/index.js",
+    "build:client": "webpack --config ./client/webpack.client.js",
+    "build:server": "NODE_ENV=development webpack --config ./server/webpack.server.js --mode=development",
+    "dev:start": "nodemon ./dist/server.index.js",
     "dev": "npm run build:client && npm run build:server && npm run dev:start",
     "format:all": "prettier --write .",
-    "watch:client": "parcel -p 3001 client/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

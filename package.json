@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "build:client": "webpack --config ./client/webpack.client.js",
-    "build:server": "NODE_ENV=development webpack --config ./server/webpack.server.js --mode=development",
+    "build:dev": "NODE_ENV=development webpack --mode=development",
     "dev:start": "nodemon ./dist/server.index.js",
-    "dev": "npm run build:client && npm run build:server && npm run dev:start",
+    "dev": "npm run build:dev && npm run dev:start",
     "format:all": "prettier --write .",
     "lint:all": "eslint . --ext .js,.jsx",
     "test": "echo \"Error: no test specified\" && exit 1"

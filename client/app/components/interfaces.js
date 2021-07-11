@@ -10,6 +10,14 @@ const ISubtasks = PropTypes.shape({
   items: PropTypes.arrayOf(PropTypes.string).isRequired
 }).isRequired;
 
+export const IButton = {
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
+  theme: PropTypes.oneOf([])
+};
+
 export const IItem = {
   body: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,

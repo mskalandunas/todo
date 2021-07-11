@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { fetchData } from '../utils/fetchUtils';
-
+import { Button } from './Button';
 import { Column } from './Column';
+import { fetchData } from '../utils/fetchUtils';
 import { IColumn } from './interfaces';
 
 export class Application extends React.Component {
@@ -25,6 +25,7 @@ export class Application extends React.Component {
 
     return (
       <li key={key}>
+        <Button onClick={() => {}} text="+" />
         <Column {...props} />
       </li>
     );

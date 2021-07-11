@@ -1,4 +1,4 @@
-import { noop } from '@utils/functional';
+import { noop } from './functional';
 
 const handleResponse = (fail, success) => response => {
   if (!response.ok || response.status >= 400) {
@@ -19,7 +19,7 @@ export const fetchData = ({
   url
 }) => {
   return fetch(url, options)
-    .then(handleResponse(fail), fail)
+    .then(handleResponse(fail, success), fail)
     .then(success)
     .catch(fail);
 };

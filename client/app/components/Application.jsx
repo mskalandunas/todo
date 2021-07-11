@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { fetchData } from '@utils/fetchUtils';
+import { fetchData } from '../utils/fetchUtils';
 
 import { Column } from './Column';
 import { IColumn } from './interfaces';
@@ -16,9 +16,9 @@ export class Application extends React.Component {
     loading: true
   };
 
-  handleFetchSuccess = (columns) => {
+  handleFetchSuccess = columns => {
     this.setState(() => ({ columns, loading: false }));
-  }
+  };
 
   renderColumns(props, i) {
     const key = props.heading + '_' + i;

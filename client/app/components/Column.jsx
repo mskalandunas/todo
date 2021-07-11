@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DraggableItem } from './DraggableItem';
+import { Item } from './Item';
 import { IColumn } from './interfaces';
 
 export class Column extends React.Component {
   renderItem(props) {
     return (
       <li>
-        <DraggableItem {...props} />
+        <Item {...props} />
       </li>
     );
   }

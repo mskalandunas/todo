@@ -6,7 +6,10 @@ const { extendConfigFromBase } = require('../webpack.base');
 
 module.exports = extendConfigFromBase({
   entry: {
-    client: [path.resolve('client/index.jsx'), path.resolve('client/style/base.scss')]
+    client: [
+      path.resolve('client/index.jsx'),
+      path.resolve('client/style/base.scss')
+    ]
   },
   target: 'web',
   output: {

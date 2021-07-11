@@ -19,5 +19,5 @@ export const IItem = {
 
 export const IColumn = {
   heading: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(IItem).isRequired
+  items: PropTypes.arrayOf(PropTypes.shape(IItem)).isRequired
 };

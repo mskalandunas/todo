@@ -4,7 +4,7 @@ const extendConfigFromBase = overwrites => ({
   module: {
     rules: [
       {
-        test: /\.(js|jsx|mjs)$/,
+        test: /\.(js|jsx)$/,
         use: 'babel-loader'
       },
       {
@@ -23,9 +23,8 @@ const extendConfigFromBase = overwrites => ({
   },
   resolve: {
     alias: {
-      '@components': path.resolve('lib/components'),
-      '@fixtures': path.resolve('lib/__fixtures__'),
-      '@utils': path.resolve('lib/utils')
+      '@client': path.resolve('client'),
+      '@fixtures': path.resolve('lib/__fixtures__')
     },
     extensions: ['.js', '.jsx', '.scss']
   },

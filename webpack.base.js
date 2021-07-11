@@ -6,6 +6,18 @@ const extendConfigFromBase = overwrites => ({
       {
         test: /\.(js|jsx|mjs)$/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'main.css'
+            }
+          },
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -15,7 +27,7 @@ const extendConfigFromBase = overwrites => ({
       '@fixtures': path.resolve('lib/__fixtures__'),
       '@utils': path.resolve('lib/utils')
     },
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.scss']
   },
   ...overwrites
 });
